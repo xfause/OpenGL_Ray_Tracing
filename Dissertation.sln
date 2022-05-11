@@ -9,6 +9,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BasicRayTracingWithC++", "B
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenglRayTracing", "OpenglRayTracing\OpenglRayTracing.vcxproj", "{D40A7ACE-8008-443F-BD7D-5E19D22CA7BC}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DisneyBRDF", "DisneyBRDF\DisneyBRDF.vcxproj", "{A3238A48-0EEF-411C-836F-4954C1DD553B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ImportanceSampling_LowDiscrepancySequence", "ImportanceSampling_LowDiscrepancySequence\ImportanceSampling_LowDiscrepancySequence.vcxproj", "{8F71B2F4-AB41-4BDE-AD2E-B41704E5E8FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +45,22 @@ Global
 		{D40A7ACE-8008-443F-BD7D-5E19D22CA7BC}.Release|x64.Build.0 = Release|x64
 		{D40A7ACE-8008-443F-BD7D-5E19D22CA7BC}.Release|x86.ActiveCfg = Release|Win32
 		{D40A7ACE-8008-443F-BD7D-5E19D22CA7BC}.Release|x86.Build.0 = Release|Win32
+		{A3238A48-0EEF-411C-836F-4954C1DD553B}.Debug|x64.ActiveCfg = Debug|x64
+		{A3238A48-0EEF-411C-836F-4954C1DD553B}.Debug|x64.Build.0 = Debug|x64
+		{A3238A48-0EEF-411C-836F-4954C1DD553B}.Debug|x86.ActiveCfg = Debug|Win32
+		{A3238A48-0EEF-411C-836F-4954C1DD553B}.Debug|x86.Build.0 = Debug|Win32
+		{A3238A48-0EEF-411C-836F-4954C1DD553B}.Release|x64.ActiveCfg = Release|x64
+		{A3238A48-0EEF-411C-836F-4954C1DD553B}.Release|x64.Build.0 = Release|x64
+		{A3238A48-0EEF-411C-836F-4954C1DD553B}.Release|x86.ActiveCfg = Release|Win32
+		{A3238A48-0EEF-411C-836F-4954C1DD553B}.Release|x86.Build.0 = Release|Win32
+		{8F71B2F4-AB41-4BDE-AD2E-B41704E5E8FC}.Debug|x64.ActiveCfg = Debug|x64
+		{8F71B2F4-AB41-4BDE-AD2E-B41704E5E8FC}.Debug|x64.Build.0 = Debug|x64
+		{8F71B2F4-AB41-4BDE-AD2E-B41704E5E8FC}.Debug|x86.ActiveCfg = Debug|Win32
+		{8F71B2F4-AB41-4BDE-AD2E-B41704E5E8FC}.Debug|x86.Build.0 = Debug|Win32
+		{8F71B2F4-AB41-4BDE-AD2E-B41704E5E8FC}.Release|x64.ActiveCfg = Release|x64
+		{8F71B2F4-AB41-4BDE-AD2E-B41704E5E8FC}.Release|x64.Build.0 = Release|x64
+		{8F71B2F4-AB41-4BDE-AD2E-B41704E5E8FC}.Release|x86.ActiveCfg = Release|Win32
+		{8F71B2F4-AB41-4BDE-AD2E-B41704E5E8FC}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

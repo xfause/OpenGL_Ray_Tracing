@@ -136,7 +136,6 @@ void readObj(std::string filepath, std::vector<vec3>& vertices, std::vector<GLui
 
 	int offset = vertices.size();
 
-	// °´ÐÐ¶ÁÈ¡
 	while (std::getline(fin, line)) {
 		std::istringstream sin(line);
 		std::string type;
