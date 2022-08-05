@@ -556,6 +556,9 @@ clock_t t1, t2;
 double dt, fps;
 unsigned int frameCounter = 0;
 void display() {
+
+    //if (frameCounter == 1000) system("pause");
+
     t2 = clock();
     dt = double(t2 - t1) / CLOCKS_PER_SEC;
     fps = 1.0 / dt;
@@ -732,10 +735,10 @@ int main(int argc, char** argv) {
     glTexBuffer(GL_TEXTURE_BUFFER, GL_RGB32F, tbo1);
 
     // hdr backgrouond
-    //HDRLoaderResult hdrRes;
-    //bool r = HDRLoader::load("../OpenglRayTracing/HDR/circus_arena_4k.hdr", hdrRes);
-    //hdrMap = getTextureRGB32F(hdrRes.width, hdrRes.height);
-    //glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB32F, hdrRes.width, hdrRes.height, 0, GL_RGB, GL_FLOAT, hdrRes.cols);
+    HDRLoaderResult hdrRes;
+    bool r = HDRLoader::load("../OpenglRayTracing/HDR/circus_arena_4k.hdr", hdrRes);
+    hdrMap = getTextureRGB32F(hdrRes.width, hdrRes.height);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB32F, hdrRes.width, hdrRes.height, 0, GL_RGB, GL_FLOAT, hdrRes.cols);
 
     //pipline
     std::string pass1ShaderPath = "../OpenglRayTracing/shaders/pass1.fsh";

@@ -725,6 +725,11 @@ int main(int argc, char** argv) {
     m.clearcoat = 1.0;
     //m.emissive = vec3(10, 20, 10);
     readObj("../DisneyBRDF/models/teapot.obj", triangles, m, getTransformMatrix(vec3(0, 0, 0), vec3(0, -0.4, 0), vec3(1.75, 1.75, 1.75)), true);
+    //readObj("../OpenglRayTracing/models/bunny.obj", triangles, m, getTransformMatrix(
+    //    vec3(0, 0, 0),
+    //    vec3(0.3, -1.6, 0),
+    //    vec3(1.5, 1.5, 1.5)
+    //), true);
 
     int nTriangles = triangles.size();
     std::cout << "model read success: total " << nTriangles << " triangles" << std::endl;

@@ -1,0 +1,31 @@
+Renderer
+{
+	resolution 1280 720
+	maxDepth 2
+	tileWidth 240
+	tileHeight 144
+	envMap HDR/white_cliff_top_1k.hdr
+	hdrMultiplier 2.0
+}
+
+Camera
+{
+	position -3 0 3
+	lookAt 0 0 0
+	fov 60
+}
+
+material helmet
+{
+	albedoTexture Helmet/textures/Image_0.jpg
+	metallicRoughnessTexture Helmet/textures/Image_1.jpg
+	normalTexture Helmet/textures/Image_4.jpg
+	emissionTexture Helmet/textures/Image_2.jpg
+}
+
+mesh
+{
+	name Helmet
+	file Helmet/helmet.obj
+	material helmet
+}

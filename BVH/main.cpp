@@ -6,6 +6,8 @@
 #include <iostream>
 #include <algorithm>
 #include <filesystem>
+#include<time.h>
+
 
 #include <GL/glew.h>
 #include <GL/freeglut.h>
@@ -550,6 +552,7 @@ int main(int argc, char** argv) {
 		v.y -= 0.5;
 	}
 	readObj("../BVH/models/quad.obj", vertices, indices);
+
 	// build triangles array
 	for (int i = 0; i < indices.size(); i += 3) {
 		triangles.push_back(Triangle(vertices[indices[i]], vertices[indices[i + 1]], vertices[indices[i + 2]]));

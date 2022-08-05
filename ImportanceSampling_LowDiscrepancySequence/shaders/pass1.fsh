@@ -719,7 +719,7 @@ vec3 pathTracing(HitResult hit, int maxBounce){
         vec3 N = hit.normal;
 
         vec2 uv = sobolVec2(frameCounter+1, bounce);
-        // uv = CranleyPattersonRotation(uv);
+        uv = CranleyPattersonRotation(uv);
         // uv = vec2(rand(), rand());
 
         vec3 L = SampleHemisphere(uv.x, uv.y);
@@ -787,7 +787,8 @@ vec3 pathTracingImportanceSampling(HitResult hit, int maxBounce){
                 // 多重重要性采样
                 float mis_weight = misMixWeight(pdf_light, pdf_brdf);
                 Lo += mis_weight * history * color * f_r * dot(N, L) / pdf_light;
-                // Lo += history * color * f_r * dot(N, L) / pdf_light;   // 尝龟
+                
+                // Lo += history * color * f_r * dot(N, L) / pdf_light;   // 常规
             }
         }
 
@@ -822,7 +823,8 @@ vec3 pathTracingImportanceSampling(HitResult hit, int maxBounce){
             // 多重重要性采样
             float mis_weight = misMixWeight(pdf_brdf, pdf_light);   // f(a,b) = a^2 / (a^2 + b^2)
             Lo += mis_weight * history * color * f_r * NdotL / pdf_brdf;
-            // Lo += history * color * f_r * NdotL / pdf_brdf;   // 尝龟
+            
+            // Lo += history * color * f_r * NdotL / pdf_brdf;   // 常规
 
             break;
         }

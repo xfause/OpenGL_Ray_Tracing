@@ -658,7 +658,7 @@ double dt, fps;
 unsigned int frameCounter = 0;
 void display() {
 
-    //if (frameCounter == 20) system("pause");
+    //if (frameCounter == 50) system("pause");
 
     t2 = clock();
     dt = double(t2 - t1) / CLOCKS_PER_SEC;
@@ -761,6 +761,7 @@ int main(int argc, char** argv) {
     m.clearcoatGloss = 0.0;
     m.baseColor = vec3(1, 0.73, 0.25);
     readObj("../ImportanceSampling_LowDiscrepancySequence/models/teapot.obj", triangles, m, getTransformMatrix(vec3(0, 0, 0), vec3(0, -0.5, 0), vec3(0.75, 0.75, 0.75)), true);
+    //readObj("../ImportanceSampling_LowDiscrepancySequence/models/sphere.obj", triangles, m, getTransformMatrix(vec3(0, 0, 0), vec3(0, 0, 0), vec3(0.75, 0.75, 0.75)), true);
 
     m.roughness = 0.01;
     m.metallic = 0.1;

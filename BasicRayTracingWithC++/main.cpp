@@ -6,6 +6,8 @@
 #include "svpng.inc"    // png output ref: https://github.com/miloyip/svpng
 #include <omp.h>    // openmp multi-thread
 
+#include<time.h>
+
 using namespace glm;
 using namespace std;
 
@@ -297,6 +299,10 @@ vec3 pathTracing(vector<Shape*>& shapes, Ray ray, int depth)
 
 int main()
 {
+    clock_t start, finish;
+    double totaltime;
+    start = clock();
+
     vector<Shape*> shapes;
 
     Sphere s1 = Sphere(vec3(-0.65, -0.7, 0.0), 0.3, GREEN);
@@ -426,6 +432,10 @@ int main()
     }
 
     imshow(image, "basic_ray_tracing_with_c++.png");
+
+    finish = clock();
+    totaltime = (double)(finish - start) / CLOCKS_PER_SEC;
+    cout << "finish in " << totaltime << " seconds" << endl;
 
     return 0;
 }

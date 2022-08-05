@@ -1,0 +1,44 @@
+Renderer
+{
+	resolution 1280 720
+	maxDepth 2
+	tileWidth 240
+	tileHeight 144
+	envMap HDR/san_giuseppe_bridge_blurred.hdr
+	hdrMultiplier 1.0
+}
+
+Camera
+{
+	position 1.08 1.04 4.19
+	lookAt 0 2.35 0
+	fov 90
+}
+
+material skateboard
+{
+	albedoTexture silent-ash/textures/skate_bunny_board_Skateboard_BaseColor_1001.png
+	metallicRoughnessTexture silent-ash/textures/skate_bunny_board_Skateboard_Metallic_1001-skate_bunny_board.png
+	normalTexture silent-ash/textures/skate_bunny_board_Skateboard_Normal_1001.png
+}
+
+material bunny
+{
+	albedoTexture silent-ash/textures/skate_bunny_UV_ready_Bunny_BaseColor_1001.png
+	metallicRoughnessTexture silent-ash/textures/skate_bunny_UV_ready_Bunny_Metallic_1001-skate_bunny_UV_read.png
+	normalTexture silent-ash/textures/skate_bunny_UV_ready_Bunny_Normal_1001.png
+}
+
+mesh
+{
+	name Bunny
+	file silent-ash/bunny.obj
+	material bunny
+}
+
+mesh
+{
+	name Skateboard
+	file silent-ash/skateboard.obj
+	material skateboard
+}
