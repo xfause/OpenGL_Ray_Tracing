@@ -4,4 +4,4 @@ Dissertation
 
 OpenGL path tracing demo with low discrepancy sequence and multi-importance/ importance sampling.
 
-![](https://files.catbox.moe/1yet9b.gif)
+![](https://github.com/xfause/OpenGL_Ray_Tracing/blob/main/optimization.gif)
